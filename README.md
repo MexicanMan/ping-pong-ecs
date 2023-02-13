@@ -1,1 +1,1 @@
-# pingpong-test
+# ping-pong-ecs
