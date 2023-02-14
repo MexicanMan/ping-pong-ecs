@@ -2,10 +2,12 @@
 using BeresnevTest.GameLogic.Events;
 using BeresnevTest.Movement.Tags;
 using Leopotam.EcsLite;
-using UnityEngine;
 
 namespace BeresnevTest.GameLogic.Systems
 {
+    /// <summary>
+    /// Система обновления направления движения ракеток в зависимости от пользовательского ввода
+    /// </summary>
     public class RacketDirectionUpdateSystem : IEcsInitSystem, IEcsRunSystem
     {
         private EcsPool<MovableComponent> _movablePool;

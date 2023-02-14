@@ -5,6 +5,9 @@ using UnityEngine.InputSystem;
 
 namespace BeresnevTest.GameLogic.Systems
 {
+    /// <summary>
+    /// Система обработки пользовательского ввода и создания ecs события с ним
+    /// </summary>
     public class PlayerInputSystem : IEcsInitSystem, IEcsDestroySystem
     {
         private EcsWorld _world;

@@ -6,6 +6,9 @@ using UnityEngine;
 
 namespace BeresnevTest.GameLogic.Systems
 {
+    /// <summary>
+    /// Система (пере)запускающая игру с начала: спавн мяча в центре, выбор случайного направления
+    /// </summary>
     public class GameStartSystem : IEcsInitSystem, IEcsRunSystem
     {
         private static readonly Vector2[] InitialDirections = { new Vector2(1, 1), new Vector2(-1, 1), 

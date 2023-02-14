@@ -5,6 +5,9 @@ using Leopotam.EcsLite;
 
 namespace BeresnevTest.GameLogic.Systems
 {
+    /// <summary>
+    /// Система, инициализурующая игру: смена скина для мяча
+    /// </summary>
     public class GameInitSystem : IEcsInitSystem
     {
         private readonly IPlayerState _playerState;

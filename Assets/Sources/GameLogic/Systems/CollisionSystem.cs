@@ -6,6 +6,9 @@ using UnityEngine;
 
 namespace BeresnevTest.GameLogic.Systems
 {
+    /// <summary>
+    /// Система обработки столкновений мяча с препятствиями (стенами/ракетками) и измененеия направления движения
+    /// </summary>
     public class CollisionSystem : IEcsInitSystem, IEcsRunSystem
     {
         private EcsPool<MovableComponent> _movablePool;

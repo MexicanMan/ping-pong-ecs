@@ -4,6 +4,9 @@ using UnityEngine;
 
 namespace BeresnevTest.GameLogic.Systems
 {
+    /// <summary>
+    /// View-система, обновляющая трансформ сущностей в соответствии с их позицией
+    /// </summary>
     public class TransformSystem : IEcsInitSystem, IEcsRunSystem
     {
         private EcsPool<TransformableComponent> _transformablePool;

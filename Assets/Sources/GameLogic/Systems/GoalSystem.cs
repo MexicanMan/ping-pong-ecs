@@ -6,6 +6,9 @@ using Leopotam.EcsLite;
 
 namespace BeresnevTest.GameLogic.Systems
 {
+    /// <summary>
+    /// Система отлавливающая "голы" - вылеты мяча за рамки поля сверху и снизу ракеток
+    /// </summary>
     public class GoalSystem : IEcsInitSystem, IEcsRunSystem
     {
         private EcsWorld _world;

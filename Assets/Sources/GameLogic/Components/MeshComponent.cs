@@ -3,6 +3,9 @@ using UnityEngine;
 
 namespace BeresnevTest.GameLogic.Components
 {
+    /// <summary>
+    /// Компонент обертка над мешем
+    /// </summary>
     [Serializable]
     public struct MeshComponent
     {

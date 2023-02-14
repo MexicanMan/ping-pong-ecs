@@ -4,6 +4,9 @@ using UnityEngine;
 
 namespace BeresnevTest.GameLogic.Systems
 {
+    /// <summary>
+    /// Система, двигающая сущности вдоль их направления движения с заданной для них скоростью
+    /// </summary>
     public class MovementSystem : IEcsInitSystem, IEcsRunSystem
     {
         private EcsPool<MovableComponent> _movablePool;
