@@ -8,7 +8,7 @@ namespace BeresnevTest.GameLogic.Systems
 {
     public class GameStartSystem : IEcsInitSystem, IEcsRunSystem
     {
-        private static Vector2[] InitialDirections = new[] { new Vector2(1, 1), new Vector2(-1, 1), 
+        private static readonly Vector2[] InitialDirections = { new Vector2(1, 1), new Vector2(-1, 1), 
             new Vector2(1, -1), new Vector2(-1, -1)};
         
         private EcsPool<MovableComponent> _movablePool;

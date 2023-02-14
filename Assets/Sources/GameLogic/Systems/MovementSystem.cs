@@ -12,7 +12,7 @@ namespace BeresnevTest.GameLogic.Systems
 
         private EcsFilter _movablePositionColliderFilter;
 
-        private MovementClamper _movementClamper;
+        private readonly MovementClamper _movementClamper;
 
         public MovementSystem(MovementClamper clamper)
         {

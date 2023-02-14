@@ -4,7 +4,7 @@ namespace BeresnevTest.GameLogic
 {
     public class CoordinatesConverter
     {
-        private Camera _camera;
+        private readonly Camera _camera;
 
         public CoordinatesConverter(Camera camera)
         {

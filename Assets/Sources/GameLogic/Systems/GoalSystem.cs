@@ -1,6 +1,7 @@
 ﻿using BeresnevTest.GameLogic.Components;
 using BeresnevTest.GameLogic.Events;
 using BeresnevTest.Movement.Tags;
+using BeresnevTest.Data;
 using Leopotam.EcsLite;
 
 namespace BeresnevTest.GameLogic.Systems
@@ -14,13 +15,20 @@ namespace BeresnevTest.GameLogic.Systems
 
         private EcsFilter _positionBallFilter;
 
-        private float _topGateCoordinate;
-        private float _bottomGateCoordinate;
+        private readonly float _topGateCoordinate;
+        private readonly float _bottomGateCoordinate;
+
+        private readonly ICurrentSessionData _currentSessionData;
+        private readonly IPlayerState _playerState;
         
-        public GoalSystem(float topGateCoordinate, float bottomGateCoordinate)
+        public GoalSystem(float topGateCoordinate, float bottomGateCoordinate, ICurrentSessionData currentSessionData,
+            IPlayerState playerState)
         {
             _topGateCoordinate = topGateCoordinate;
             _bottomGateCoordinate = bottomGateCoordinate;
+
+            _currentSessionData = currentSessionData;
+            _playerState = playerState;
         }
         
         public void Init(IEcsSystems systems)
@@ -45,8 +53,18 @@ namespace BeresnevTest.GameLogic.Systems
                 {
                     var gameStartEvent = _world.NewEntity();
                     _startGameEventPool.Add(gameStartEvent);
+
+                    UpdateScores();
                 }
             }
+        }
+
+        private void UpdateScores()
+        {
+            _currentSessionData.IncrementScore();
+                    
+            if (_currentSessionData.Score.Value > _playerState.BestScore)
+                _playerState.UpdateBestScore(_currentSessionData.Score.Value);
         }
     }
 }

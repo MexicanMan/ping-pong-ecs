@@ -5,11 +5,6 @@ using UnityEngine;
 
 namespace BeresnevTest.MonoConverters.World.Systems
 {
-#if ENABLE_IL2CPP
-    [Unity.IL2CPP.CompilerServices.Il2CppSetOption (Unity.IL2CPP.CompilerServices.Option.NullChecks, false)]
-    [Unity.IL2CPP.CompilerServices.Il2CppSetOption (Unity.IL2CPP.CompilerServices.Option.ArrayBoundsChecks, false)]
-#endif
-
     class WorldInitSystem : IEcsPreInitSystem, IEcsRunSystem, IEcsDestroySystem
     {
         private EcsPool<InstantiateComponent> _instantiatePool;

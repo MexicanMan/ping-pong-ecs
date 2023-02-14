@@ -2,6 +2,7 @@
 using BeresnevTest.GameLogic.Events;
 using BeresnevTest.Movement.Tags;
 using Leopotam.EcsLite;
+using UnityEngine;
 
 namespace BeresnevTest.GameLogic.Systems
 {
@@ -40,7 +41,7 @@ namespace BeresnevTest.GameLogic.Systems
                 {
                     ref var movableComponent = ref _movablePool.Get(racket);
                     var positionComponent = _positionPool.Get(racket);
-                    movableComponent.MovementDirection.x = positionComponent.Position.x - inputEvent.Input.x;
+                    movableComponent.MovementDirection.x = -inputEvent.Input.x - positionComponent.Position.x;
                 }
                 
                 _inputPool.Del(input);

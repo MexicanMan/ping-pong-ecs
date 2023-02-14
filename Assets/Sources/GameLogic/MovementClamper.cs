@@ -4,8 +4,8 @@ namespace BeresnevTest.GameLogic
 {
     public class MovementClamper
     {
-        private float _leftBoundary;
-        private float _rightBoundary;
+        private readonly float _leftBoundary;
+        private readonly float _rightBoundary;
 
         public MovementClamper(float leftBoundary, float rightBoundary)
         {

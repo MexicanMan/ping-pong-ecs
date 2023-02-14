@@ -10,9 +10,9 @@ namespace BeresnevTest.GameLogic.Systems
         private EcsWorld _world;
         private EcsPool<PlayerInputEvent> _inputPool;
 
-        private InputAction _playerSlideInput;
+        private readonly InputAction _playerSlideInput;
 
-        private CoordinatesConverter _coordinatesConverter;
+        private readonly CoordinatesConverter _coordinatesConverter;
 
         public PlayerInputSystem(Input.Input input, CoordinatesConverter coordinatesConverter)
         {
